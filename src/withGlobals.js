@@ -11,9 +11,7 @@ export const withGlobals = (StoryFn, context) => {
   useEffect(() => {
     const selector = isInDocs
       ? `#anchor--${context.id} .sb-story`
-      : "#storybook-root";
-
-    console.log(globals);
+      : "html";
 
     changeBackgroundMode(selector, { darkMode, isInDocs, className });
   }, [darkMode, isInDocs, context.id]);
